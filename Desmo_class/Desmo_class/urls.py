@@ -18,8 +18,6 @@ from django.contrib import admin
 from django.conf.urls import include
 from first_app import views
 urlpatterns = [
-    url(r'^$',views.index,name='index'),
     url(r'^',include('first_app.urls')),
-    url(r'^help/',include('first_app.urls')),
     url(r'^admin/', admin.site.urls),
 ]

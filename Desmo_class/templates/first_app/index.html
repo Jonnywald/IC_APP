@@ -3,13 +3,22 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>First App</title>
+    <title>Django App</title>
     <link rel="stylesheet" href="{% static "CSS/mystyle.css" %}">
+     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
   </head>
   <body>
-    <h1>Hello this is index.html</h1>
-    {{ insert_me }}
-    <p>olha o neyma ai lek</p>
-    <img src="{% static "images/neyma.jpg" %}" alt="Ops, something not right went wrong">
+    <h1>Hello Welcome to my Django App!</h1>
+    <p>go to: <a href="/users/">users</a> or <a href="/help/">help</a></p>
+    <h2>Menu:</h2>
+    <nav>
+      <a href="/reta/">RETAS</a>
+      <a href="/parabola/">PARÁBOLAS</a>
+      <a href="/trigonometria/">FUNÇÕES TRIGONOMÉTRICAS</a>
+      <a href="/circulo/">CIRCUNFERÊNCIA</a>
+      <a href="/elipse/">ELIPSE</a>
+      <a href="/hiperbole/">HIPÉRBOLE</a>
+      <a href="/outros/">EXTRAS</a>
+    </nav>
   </body>
 </html>
