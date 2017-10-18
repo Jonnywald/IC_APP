@@ -12,4 +12,5 @@ urlpatterns = [
     url(r'^hiperbole/$', views.hiperbole,name='hiperbole'),
     url(r'^outros/$', views.outros,name='outros'),
     url(r'^trigonometria/$', views.trigonometria,name='trigonometria'),
+    url(r'^formpage/$',views.form_name_view,name='form_page'),
 ]
