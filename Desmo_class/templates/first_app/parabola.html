@@ -1,13 +1,15 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html>
   <head>
     <meta charset="utf-8">
     <title>Parábola</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href={% static "CSS/mystyle.css" %}>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Menu</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -40,6 +42,17 @@
       </ul>
     </div>
     </nav>
-    <h1>Parábolas</h1>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Parábolas</h1>
+      </div>
+    </div>
+    <div class="container">
+      <h2>O que são Parábolas?</h2>
+      <p>Parabolas são curvas caracterizadas por uma função de <strong>segundo grau</strong>.<br>
+      Elas são o utilizadas para dar curvas para nossos desenhos.<br>
+      Veremos as formas de reprensentar e manipular as parábolas.<br>
+      <em>"Gata me chama de Paul Walker e deixa eu fazer um drift nas suas curvas" - Zeine Michel,2016</em></p>
+    </div>
   </body>
 </html>

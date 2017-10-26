@@ -1,12 +1,6 @@
-h1,h2,p{
-  color: black;
-  font-family: 'Montserrat', sans-serif;
+.jumbotron {
+  background-color: #00470a !important;
 }
-table,th,td {
-  border: 2px solid black;
-}
-.txt_exp {
-  background-color: grey;
-  border: 1px;
-  margin: auto;
+.jumbotron h1{
+  color: #b2b2b2 !important;
 }

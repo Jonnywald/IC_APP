@@ -5,10 +5,11 @@
     <meta charset="utf-8">
     <title>Retas</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href={% static "CSS/mystyle.css" %}>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Menu</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -41,22 +42,76 @@
       </ul>
     </div>
     </nav>
-    <div class="contaier">
+    <div class="container">
       <div class="jumbotron">
         <h1>Retas</h1>
-        <p>Retas são o tipo mais simples de funções matematicas</p>
-        <p>dentro de retas iremos ver dois tipos de funções:</p>
-        <p>Funções Constantes</p>
-        <p>Funções Lineares</p>
       </div>
+    </div>
+    <div class="container">
+      <h2>O que são retas?</h2>
+      <p>Retas são o tipo mais simples de <strong>funções</strong> matematicas.<br>
+      Elas são essenciais para desenhar, do basico ao avançado.<br>
+      Retas são Funções de <strong>primeiro grau</strong> na matemática.<br>
+      <em>"com 5 ou 6 retas é facil fazer um castelo" - Toquinho,1980</em></p>
+      <p>Dentro de retas iremos ver dois tipos de funções:</p>
+      <ul>
+        <li>Funções Constantes</li>
+        <li>Funções Lineares</li>
+      </ul>
+      <p><strong>Exemplo de Reta:</strong></p>
+      <img src="https://i.imgur.com/IoiY64r.png" alt="OPS! Imagem não encontrada!">
+      <small><br><em>formula: y = 2x+1</em></small>
+      <h2>Forma genérica da Reta</h2>
+      <p>Como toda função a reta tem uma forma genérica de ser representada:<br>
+      Esta é a forma genérica da reta:<strong>Y = a*X + b</strong><br>
+      Onde <em>a</em> é chamado de coeficiente angular da reta<br>
+      e <em>b</em> é chamado de coeficiente linear da reta.</p>
+      <p>Te encorajo a entrar no <a target="_blank" href="http://www.desmos.com">DESMOS</a> e seguir o passo a passo abaixo:</p>
+      <p><strong>1</strong> entre no link acima <br>
+      <strong>2</strong> Clique em <strong>"Start Graphing"</strong> <br>
+      <img src="https://i.imgur.com/UgAXP0l.png" alt="OPS! Imagem não encontrada!"> <br>
+      <strong>3</strong> Clique na caixa de texto do lado  superior esquerdo:<br>
+      <img src="https://i.imgur.com/dT1oRjx.png" alt="OPS! Imagem não encontrada!"><br>
+      <strong>4</strong> Digite : <em>y=ax+b</em><br>
+      <img src="https://i.imgur.com/6rgKIYz.png" alt="OPS! Imagem não encontrada!"><br>
+      <strong>5</strong> Selecione os controles deslisantes <em>a</em>e <em>b</em><br>
+      <img src="https://i.imgur.com/5j7bWtT.png" alt="OPS! Imagem não encontrada!"><br>
+      </p>
+      <p>Note que você agora tem uma reta!</p>
+      <p>Toda e qualquer reta pode ser descrita por <em>y = ax+b</em><br>
+      então iremos ver qual a função de cada coeficiente, e como podemos <br>
+      manipula-los para gerar nossos desenhos.</p>
       <h2>Funções Constantes</h2>
-      <div class="txt_exp">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Funções constantes são caracterizadas por conterem apenas um argumento: seu <strong>Valor</strong>.
+      <br>a função constante é caracterizada da seguinte maneira: (eixo da função)= (constante)<br>
+      por exemplo:</p>
+      <ul>
+        <li>x = 5</li>
+        <li>x = 2</li>
+        <li>x = e</li>
+        <li>y = 2</li>
+        <li>y = -1</li>
+        <li>y = 0.5</li>
+      </ul>
+      <p>Vamos ver exemplos dessas funções plotadas em um grafico:<br>Função x = 3</p>
+      <img src="https://i.imgur.com/rEfnITM.png" alt="OPS! Imagem não encontrada!">
+      <p>Função x = 2</p>
+      <img src="https://i.imgur.com/ZZ0vRqJ.png" alt="OPS! Imagem não encontrada!">
+      <div class="container teste">
+        <h3>Teste</h3>
+        <h4>Olhe a imagem abaixo, qual o valor da constante?</h4>
+        <img src="https://i.imgur.com/75pSCJ0.png" alt="OPS! Imagem não encontrada!">
+        <form method="post">
+          <div class="form-group">
+            <label for="retaTeste1">X = </label>
+            <input type="text" class="form-control" id="retaTeste1" placeholder="constante">
+          </div>
+          {% csrf_token %}
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
       </div>
       <h2>Funções Lineares</h2>
-      <div class="txt_exp">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
   </body>
 </html>
