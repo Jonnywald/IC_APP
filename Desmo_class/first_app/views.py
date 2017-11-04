@@ -16,7 +16,9 @@ def user(request):
     user_dict = {'users_key' : user_list}
     return render(request,'first_app/user.html',context=user_dict)
 def reta(request):
-    return render(request,'first_app/reta.html')
+    CoefLinT1 = forms.TesteSimples()
+    CoefAngT1 = forms.TesteSimples()
+    return render(request,'first_app/reta.html',{'test1':CoefLinT1,'test2':CoefAngT1})
 def parabola(request):
     return render(request,'first_app/parabola.html')
 def circulo(request):
