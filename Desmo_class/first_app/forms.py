@@ -1,11 +1,11 @@
 from django import forms
+from first_app.models import Users
 from django.core import validators
 
-class FormName(forms.Form):
-    name = forms.CharField()
-    email = forms.EmailField()
-    text = forms.CharField(widget=forms.Textarea)
-    botcatcher = forms.CharField(required=False,widget=forms.HiddenInput,validators=[validators.MaxLengthValidator(0)])
+class NewUser(forms.ModelForm):
+    class Meta():
+        model = Users
+        fields = '__all__'
 
 class TesteSimples(forms.Form):
     resp = forms.IntegerField()

@@ -4,25 +4,19 @@
   <head>
     <meta charset="utf-8">
     <title>Users</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   </head>
   <body>
     <header>
       <a href="../">Voltar</a>
     </header>
-    <h1>List of users</h1>
-    {% if users_key %}
-    <ol>
-      {% for usr in users_key %}
-      <li>user:</li>
-      <ul>
-        <li>First Name : {{usr.First_name}}</li>
-        <li>Last Name: {{usr.Last_name}}</li>
-        <li>Email: {{usr.email}}</li>
-      </ul>
-      {% endfor %}
-    </ol>
-    {% else %}
-    <p>Ops no users</p>
-    {% endif %}
+    <div class="container">
+      <h1>Faça seu cadastro:</h1>
+      <form method="post">
+        {{ form.as_p}}
+        {% csrf_token %}
+        <input type="submit"class="btn btn-primary" value="Enviar">
+      </form>
+    </div>
   </body>
 </html>
